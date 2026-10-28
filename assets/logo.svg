@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="A day's prices as quarter-hour steps: those read lit, a dip below zero, those to come dim">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#131c31"/>
+      <stop offset="1" stop-color="#05080f"/>
+    </linearGradient>
+    <linearGradient id="curve" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="336" y2="0">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="below" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0.65"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <g transform="translate(0 24)">
+    <!-- zero -->
+    <line x1="84" y1="300" x2="428" y2="300" stroke="#475569" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round"/>
+
+    <!-- paid to consume -->
+    <path d="M256 300 V320 H276 V336 H296 V328 H316 V300 Z" fill="url(#below)"/>
+    <path d="M256 300 V320 H276 V336 H296 V328 H316 V300" fill="none" stroke="#fbbf24" stroke-width="14" stroke-linejoin="round"/>
+
+    <!-- read -->
+    <path d="M96 230 H116 V240 H136 V245 H156 V220 H176 V180 H196 V160 H216 V200 H236 V260 H256 V300 M316 300 V270 H336 V190" fill="none" stroke="url(#curve)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- to come -->
+    <path d="M336 190 H356 V130 H376 V150 H396 V210 H416" fill="none" stroke="#334155" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="336" cy="190" r="34" fill="url(#glow)"/>
+    <circle cx="336" cy="190" r="12" fill="#fde68a"/>
+  </g>
+</svg>
